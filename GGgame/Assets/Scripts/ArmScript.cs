@@ -7,7 +7,13 @@ public class ArmScript : MonoBehaviour {
     /// <summary>
     /// Префаб снежка
     /// </summary>
-    public GameObject snowball; 
+    public GameObject snowball;
+
+    /// <summary>
+    /// Сила, с которой игрок кидает снежки
+    /// </summary>
+    [Range(200, 700)]
+    public float force = 300;
 
 	// Use this for initialization
 	void Start () {
@@ -33,7 +39,7 @@ public class ArmScript : MonoBehaviour {
         GameObject obj = Instantiate(snowball, transform);
         obj.transform.localPosition = Vector3.forward;
 
-        obj.GetComponent<Rigidbody>().AddForce(dir * 300);
+        obj.GetComponent<Rigidbody>().AddForce(dir * force);
         obj.transform.parent = null;
     }
 }
