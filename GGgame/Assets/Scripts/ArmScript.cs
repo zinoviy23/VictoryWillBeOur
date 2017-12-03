@@ -108,6 +108,8 @@ public class ArmScript : MonoBehaviour {
     {
         while (true)
         {
+            if (hand != null && hand.GetComponent<ShovelScript>().IsWorking)
+                yield return null;
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 state = 1;
@@ -134,6 +136,7 @@ public class ArmScript : MonoBehaviour {
     {
         if (hand != null)
         {
+
             hand.SetActive(false);
         }
     }

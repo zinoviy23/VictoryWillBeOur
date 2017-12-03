@@ -142,4 +142,15 @@ public class ShovelScript : MonoBehaviour {
         isMoving = false;
         yield break;
     }
+
+    /// <summary>
+    /// Свойство для проверки на анимацию
+    /// </summary>
+    public bool IsWorking
+    {
+        get
+        {
+            return isWorking;
+        }
+    }
 }
