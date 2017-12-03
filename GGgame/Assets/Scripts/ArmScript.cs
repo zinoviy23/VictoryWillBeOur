@@ -104,17 +104,48 @@ public class ArmScript : MonoBehaviour {
     /// Меняет состояние
     /// </summary>
     /// <returns></returns>
-    IEnumerator SwitchState()
+    private IEnumerator SwitchState()
     {
         while (true)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
                 state = 1;
+                HideHand();
+            }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
                 state = 2;
+                HideHand();
+            }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
                 state = 3;
+                ShowHand();
+            }
             yield return null;
+        }
+    }
+
+    /// <summary>
+    /// Спрятать лопату
+    /// </summary>
+    private void HideHand()
+    {
+        if (hand != null)
+        {
+            hand.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Показать лопату
+    /// </summary>
+    private void ShowHand()
+    {
+        if (hand != null)
+        {
+            hand.SetActive(true);
         }
     }
 

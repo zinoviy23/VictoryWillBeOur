@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public abstract class Attackable : MonoBehaviour {
     /// <summary>
     /// Кол-во жизней
