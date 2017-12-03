@@ -22,7 +22,7 @@ public class SnowFieldScript : MonoBehaviour {
     /// <summary>
     /// Промежуток между увеличением снега
     /// </summary>
-    private readonly float delta = 3f;
+    private readonly float delta = 7f;
 
 	// Use this for initialization
 	void Start () {
