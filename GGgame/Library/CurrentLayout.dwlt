@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 976
-  m_MinSize: {x: 709, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 707, y: 492}
+  m_MaxSize: {x: 18002, y: 14042}
   vertical: 0
-  controlID: 13
+  controlID: 126
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 432, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 53
+  controlID: 14
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_MinSize: {x: 432, y: 271}
   m_MaxSize: {x: 14002, y: 10021}
   vertical: 0
-  controlID: 28
+  controlID: 39
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -257,8 +257,8 @@ MonoBehaviour:
     y: 0
     width: 534
     height: 976
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -368,14 +368,14 @@ MonoBehaviour:
     width: 1384
     height: 564
   m_SceneLighting: 0
-  lastFramingTime: 1315.3465234430373
+  lastFramingTime: 105.64346999123394
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: -2.78, y: 1.485, z: -2.5051215}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -2.78, y: 1.485, z: -2.5051215}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -398,13 +398,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.03286461, y: -0.09522595, z: 0.0029399695, w: -0.9949254}
+    m_Target: {x: -0.08688056, y: -0.49949798, z: 0.050185617, w: -0.8605056}
     speed: 2
-    m_Value: {x: -0.03286461, y: -0.095225945, z: 0.0029399695, w: -0.9949254}
+    m_Value: {x: -0.086879045, y: -0.49948928, z: 0.050184745, w: -0.8604906}
   m_Size:
-    m_Target: 22
+    m_Target: 14.416357
     speed: 2
-    m_Value: 22
+    m_Value: 14.416357
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 0
+  m_ViewIsLockedToObject: 1
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -469,7 +469,7 @@ MonoBehaviour:
     height: 564
   m_ResetOnNextRepaint: 0
   m_IgnoreNextPostprocessEvent: 0
-  m_SelectedAssetPath: Assets/Graphic/Santa/SantaSprite.png
+  m_SelectedAssetPath: Assets/Graphic/Elf/Sprite.png
   m_Selected:
     m_Name: 
     m_OriginalName: 
@@ -516,9 +516,11 @@ MonoBehaviour:
     - {fileID: 1107813281287874366, guid: 2c67f2fe00a7b8848b5a4191d01de1d8, type: 2}
     - {fileID: 1107716556856950542, guid: c8fb25118db8b644badfc1f5b5767e56, type: 2}
     - {fileID: 1107501423369114098, guid: cdd75f7ba49488141b764089a509f7df, type: 2}
+    - {fileID: 1107435374467262742, guid: 1f14a921dad362f4a98059849fc7cfa8, type: 2}
     m_ValueSerializationHelper:
     - {x: 780.4, y: 276.60004}
     - {x: 780.4, y: 296.80005}
+    - {x: 780.4, y: 276.80005}
     - {x: 780.4, y: 276.80005}
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 0}
@@ -597,19 +599,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Graphic/Elf
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Graphic/Elf
   m_LastFoldersGridSize: 50
   m_LastProjectPath: C:\Users\Alexandr\Proga\NewProga\Games\LudumDare40\VictoryWillBeOur\GGgame
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c2270000
-    m_LastClickedID: 10178
-    m_ExpandedIDs: 0000000096270000d62700007a280000a2280000f2290000f829000000ca9a3bffffff7f
+    m_SelectedIDs: c0280000
+    m_LastClickedID: 10432
+    m_ExpandedIDs: 00000000b2270000f22700009c280000c62800001a2a0000202a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -637,7 +639,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000096270000d62700007a280000a2280000f2290000f8290000
+    m_ExpandedIDs: 00000000b2270000f22700009c280000c62800001a2a0000202a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -748,9 +750,9 @@ MonoBehaviour:
     height: 370
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 28080000
-    m_LastClickedID: 0
-    m_ExpandedIDs: a6fbffff00000000
+    m_SelectedIDs: 38fbffff
+    m_LastClickedID: -1224
+    m_ExpandedIDs: 66fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
