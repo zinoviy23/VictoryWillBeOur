@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SnowElementScript : MonoBehaviour {
 
+    private int i, j;
+    private SnowFieldScript snowField;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,4 +16,17 @@ public class SnowElementScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void Init(int i, int j, SnowFieldScript snowField)
+    {
+        this.i = i;
+        this.j = j;
+        this.snowField = snowField;
+    }
+
+    public void DestroyEl()
+    {
+        snowField.DeleteElement(i, j);
+        Destroy(gameObject);
+    }
 }
