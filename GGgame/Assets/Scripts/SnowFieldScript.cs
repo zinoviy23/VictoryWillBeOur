@@ -48,7 +48,7 @@ public class SnowFieldScript : MonoBehaviour {
         {
             for (int j = 0; j < cntY; j++)
             {
-                snowGrid[j, i] = Instantiate(snowElement).GetComponent<SnowElementScript>();
+                snowGrid[j, i] = Instantiate(snowElement, transform).GetComponent<SnowElementScript>();
                 snowGrid[j, i].transform.position = new Vector3(i * snowElement.transform.localScale.x - x / 2,
                     0, j * snowElement.transform.localScale.z - y / 2) + Vector3.right / 2 + Vector3.forward / 2;
                 snowGrid[j, i].Init(j, i, this);
@@ -74,9 +74,10 @@ public class SnowFieldScript : MonoBehaviour {
                         snowGrid[i, j].transform.localScale += Vector3.up * 0.1f;
                     else
                     {
-                        snowGrid[i, j] = Instantiate(snowElement).GetComponent<SnowElementScript>();
+                        snowGrid[i, j] = Instantiate(snowElement, transform).GetComponent<SnowElementScript>();
                         snowGrid[i, j].transform.position = new Vector3(j * snowElement.transform.localScale.x - x / 2,
                             0, i * snowElement.transform.localScale.z - y / 2) + Vector3.right / 2 + Vector3.forward / 2;
+                        snowGrid[i, j].Init(i, j, this);
                     }
                 }
 
