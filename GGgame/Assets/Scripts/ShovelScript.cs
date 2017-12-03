@@ -33,6 +33,11 @@ public class ShovelScript : MonoBehaviour {
     /// </summary>
     private bool isMoving = false;
 
+    /// <summary>
+    /// Ссылка на armScript
+    /// </summary>
+    private ArmScript arm;
+
     // Use this for initialization
     void Start () {
 		
@@ -56,6 +61,15 @@ public class ShovelScript : MonoBehaviour {
     }
 
     /// <summary>
+    /// Присвоить arm
+    /// </summary>
+    /// <param name="arm"></param>
+    public void SetArm(ArmScript arm)
+    {
+        this.arm = arm;
+    }
+
+    /// <summary>
     /// Корутин для анимации атаки
     /// </summary>
     /// <returns></returns>
@@ -76,6 +90,7 @@ public class ShovelScript : MonoBehaviour {
 
 
         isWorking = false;
+        arm.AddSnowballs(5);
         yield break;
     }
 
@@ -141,5 +156,16 @@ public class ShovelScript : MonoBehaviour {
         }
         isMoving = false;
         yield break;
+    }
+
+    /// <summary>
+    /// Свойство для проверки на анимацию
+    /// </summary>
+    public bool IsWorking
+    {
+        get
+        {
+            return isWorking;
+        }
     }
 }

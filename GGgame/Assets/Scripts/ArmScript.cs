@@ -27,11 +27,26 @@ public class ArmScript : MonoBehaviour {
     private GameObject hand;
 
     /// <summary>
+    /// Кол-во снежков
+    /// </summary>
+    private int snowballsCount = 0;
+
+    /// <summary>
     /// 1 - ничего
     /// 2 - снежок
     /// 3 - рука
     /// </summary>
     private int state = 1;
+
+    /// <summary>
+    /// Снежок в руке
+    /// </summary>
+    private GameObject currentSnowBall;
+
+    /// <summary>
+    /// Анимирутеся ли снежок
+    /// </summary>
+    private bool isSnowballAnimating;
 
 	// Use this for initialization
 	void Start () {
@@ -72,24 +87,38 @@ public class ArmScript : MonoBehaviour {
             hand.transform.parent = transform;
             hand.transform.localPosition = new Vector3(0.7f, 0, 1);
             hand.transform.localRotation = Quaternion.Euler(-120, 50, 10);
+            hand.GetComponent<ShovelScript>().SetArm(this);
             state = 3;
         }
     }
-
+    
+    /// <summary>
+    /// Добавление снежков
+    /// </summary>
+    /// <param name="cnt"></param>
+    public void AddSnowballs(int cnt)
+    {
+        snowballsCount += cnt;
+    }
 
     /// <summary>
     /// Метод для бросания шарика
     /// </summary>
     void Shoot()
     {
-        Vector3 dir = Camera.main.ScreenPointToRay(
-                new Vector3(Screen.width / 2, Screen.height / 2)).direction;
+        if (currentSnowBall != null)
+        {
+            Vector3 dir = Camera.main.ScreenPointToRay(
+                    new Vector3(Screen.width / 2, Screen.height / 2)).direction;
 
-        GameObject obj = Instantiate(snowball, transform);
-        obj.transform.localPosition = Vector3.forward;
+            currentSnowBall.GetComponent<Rigidbody>().isKinematic = false;
 
-        obj.GetComponent<Rigidbody>().AddForce(dir * force);
-        obj.transform.parent = null;
+            currentSnowBall.GetComponent<Rigidbody>().AddForce(dir * force);
+            currentSnowBall.transform.parent = null;
+            currentSnowBall = null;
+            snowballsCount--;
+            ShowSnowball();
+        }
     }
 
     /// <summary>
@@ -108,20 +137,25 @@ public class ArmScript : MonoBehaviour {
     {
         while (true)
         {
+            if (hand != null && hand.GetComponent<ShovelScript>().IsWorking)
+                yield return null;
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 state = 1;
                 HideHand();
+                HideSnowball();
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 state = 2;
                 HideHand();
+                ShowSnowball();
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 state = 3;
                 ShowHand();
+                HideSnowball();
             }
             yield return null;
         }
@@ -134,8 +168,31 @@ public class ArmScript : MonoBehaviour {
     {
         if (hand != null)
         {
+
             hand.SetActive(false);
         }
+    }
+
+    private IEnumerator WaitSnowball()
+    {
+        yield return new WaitForSeconds(0.3f);
+        currentSnowBall = Instantiate(snowball, transform);
+        currentSnowBall.GetComponent<Rigidbody>().isKinematic = true;
+        currentSnowBall.transform.localPosition = Vector3.forward;
+    }
+
+    private void ShowSnowball()
+    {
+        if (snowballsCount > 0)
+        {
+            StartCoroutine(WaitSnowball());
+        }
+    }
+
+    private void HideSnowball()
+    {
+        Destroy(currentSnowBall);
+        currentSnowBall = null;
     }
 
     /// <summary>
