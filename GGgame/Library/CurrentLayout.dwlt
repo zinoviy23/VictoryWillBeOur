@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 976
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 113
+  controlID: 13
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,8 +130,8 @@ MonoBehaviour:
     y: 0
     width: 1386
     height: 976
-  m_MinSize: {x: 436, y: 492}
-  m_MaxSize: {x: 14006, y: 14042}
+  m_MinSize: {x: 432, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
   controlID: 14
 --- !u!114 &7
@@ -183,10 +183,10 @@ MonoBehaviour:
     y: 584
     width: 1386
     height: 392
-  m_MinSize: {x: 436, y: 271}
-  m_MaxSize: {x: 14006, y: 10021}
+  m_MinSize: {x: 432, y: 271}
+  m_MaxSize: {x: 14002, y: 10021}
   vertical: 0
-  controlID: 91
+  controlID: 39
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -232,8 +232,8 @@ MonoBehaviour:
     y: 0
     width: 433
     height: 392
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -368,7 +368,7 @@ MonoBehaviour:
     width: 1384
     height: 563
   m_SceneLighting: 0
-  lastFramingTime: 3228.1813022710653
+  lastFramingTime: 309.32100172852864
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
@@ -400,11 +400,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.21951614, y: 0.39764217, z: -0.09853713, w: -0.88543415}
     speed: 2
-    m_Value: {x: -0.21951507, y: 0.39764023, z: -0.09853665, w: -0.8854298}
+    m_Value: {x: -0.21951614, y: 0.39764214, z: -0.098537125, w: -0.88543415}
   m_Size:
-    m_Target: 1230.4991
+    m_Target: 39.499207
     speed: 2
-    m_Value: 1230.4991
+    m_Value: 39.499207
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 0
+  m_ViewIsLockedToObject: 1
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -593,19 +593,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Graphic
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Graphic
   m_LastFoldersGridSize: 50
   m_LastProjectPath: C:\Users\Alexandr\Proga\NewProga\Games\LudumDare40\VictoryWillBeOur\GGgame
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 02280000
-    m_LastClickedID: 10242
-    m_ExpandedIDs: 000000008e270000542800007c2800009629000000ca9a3bffffff7f
+    m_SelectedIDs: a4290000
+    m_LastClickedID: 10660
+    m_ExpandedIDs: 00000000942700005a280000822800009e29000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -633,7 +633,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e270000542800007c28000096290000
+    m_ExpandedIDs: 00000000942700005a280000822800009e290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -744,20 +744,20 @@ MonoBehaviour:
     height: 371
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8a290000
-    m_LastClickedID: 0
-    m_ExpandedIDs: e6f0d0ff6efbffffa6fbffff00000000
+    m_SelectedIDs: 882a0000
+    m_LastClickedID: 10888
+    m_ExpandedIDs: 94fbffff000000007e2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: SnowField
-      m_OriginalName: SnowField
+      m_Name: Cross
+      m_OriginalName: Cross
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -1315962
+      m_UserData: 10888
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
