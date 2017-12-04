@@ -102,6 +102,17 @@ public class ArmScript : MonoBehaviour {
     }
 
     /// <summary>
+    /// Свойство для получения колва снежков
+    /// </summary>
+    public int SnowballsCount
+    {
+        get
+        {
+            return snowballsCount;
+        }
+    }
+
+    /// <summary>
     /// Метод для бросания шарика
     /// </summary>
     void Shoot()
@@ -173,6 +184,10 @@ public class ArmScript : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Анимация снежка
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator WaitSnowball()
     {
         yield return new WaitForSeconds(0.3f);
@@ -182,6 +197,9 @@ public class ArmScript : MonoBehaviour {
         currentSnowBall.GetComponent<SnowballScript>().IsInArm = true;
     }
 
+    /// <summary>
+    /// Показать снежок
+    /// </summary>
     private void ShowSnowball()
     {
         if (snowballsCount > 0)
@@ -190,6 +208,9 @@ public class ArmScript : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Убрать снежок
+    /// </summary>
     private void HideSnowball()
     {
         Destroy(currentSnowBall);
