@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnowballScript : MonoBehaviour {
+public class SnowballScript : MonoBehaviour
+{
 
     /// <summary>
     /// Префаб взрыва
@@ -19,6 +20,8 @@ public class SnowballScript : MonoBehaviour {
 		
 	}
 
+    public bool IsInArm { get; set; }
+
     /// <summary>
     /// Метод для уничтожения объекта
     /// </summary>
@@ -32,8 +35,11 @@ public class SnowballScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        var exp = Instantiate(explosion);
-        exp.transform.position = transform.position;
-        Destroy(gameObject);
+        if (!IsInArm)
+        {
+            var exp = Instantiate(explosion);
+            exp.transform.position = transform.position;
+            Destroy(gameObject);
+        }
     }
 }

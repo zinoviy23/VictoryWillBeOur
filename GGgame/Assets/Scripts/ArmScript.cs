@@ -112,7 +112,7 @@ public class ArmScript : MonoBehaviour {
                     new Vector3(Screen.width / 2, Screen.height / 2)).direction;
 
             currentSnowBall.GetComponent<Rigidbody>().isKinematic = false;
-
+            currentSnowBall.GetComponent<SnowballScript>().IsInArm = false;
             currentSnowBall.GetComponent<Rigidbody>().AddForce(dir * force);
             currentSnowBall.transform.parent = null;
             currentSnowBall = null;
@@ -179,6 +179,7 @@ public class ArmScript : MonoBehaviour {
         currentSnowBall = Instantiate(snowball, transform);
         currentSnowBall.GetComponent<Rigidbody>().isKinematic = true;
         currentSnowBall.transform.localPosition = Vector3.forward;
+        currentSnowBall.GetComponent<SnowballScript>().IsInArm = true;
     }
 
     private void ShowSnowball()

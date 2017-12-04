@@ -59,7 +59,7 @@ public class ShovelScript : MonoBehaviour {
             CheckCollision();
         }
     }
-
+    
     /// <summary>
     /// Присвоить arm
     /// </summary>

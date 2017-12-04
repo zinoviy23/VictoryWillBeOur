@@ -31,7 +31,8 @@ public class SnowmanHP : Attackable {
         GameObject go = col.gameObject;
         if (go.tag == "Snowball")
         {
-            hp -= 5;
+            if (!go.GetComponent<SnowballScript>().IsInArm)
+                hp -= 5;
         }
     }
 
