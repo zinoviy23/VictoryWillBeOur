@@ -7,7 +7,7 @@ public abstract class Attackable : MonoBehaviour {
     /// <summary>
     /// Кол-во жизней
     /// </summary>
-    [Range(10, 30)]
+    [Range(10, 100)]
     public int hp;
 
 

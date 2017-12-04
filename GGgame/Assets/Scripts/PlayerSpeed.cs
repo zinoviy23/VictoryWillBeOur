@@ -17,10 +17,15 @@ public class PlayerSpeed : MonoBehaviour {
     /// Все куски снега, с которыми игрок пересекается
     /// </summary>
     private HashSet<GameObject> set = new HashSet<GameObject>();
+    /// <summary>
+    /// Ссылка на жизни игрока
+    /// </summary>
+    private PlayerHP playerHP;
 
     // Use this for initialization
     void Start () {
         fpc = transform.parent.GetComponent<FirstPersonController>();
+        playerHP = transform.parent.GetComponent<PlayerHP>();
         speed = fpc.m_WalkSpeed;
 	}
 	
@@ -41,6 +46,7 @@ public class PlayerSpeed : MonoBehaviour {
         }
         fpc.m_WalkSpeed = speed / (1 + max);
         fpc.m_RunSpeed = fpc.m_WalkSpeed;
+        playerHP.SnowScale = max;
     }
 
 
