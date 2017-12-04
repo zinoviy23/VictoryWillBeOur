@@ -26,13 +26,12 @@ public class SnowmanHP : Attackable {
     /// Проверка на колизию с снежком
     /// </summary>
     /// <param name="col"></param>
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
         GameObject go = col.gameObject;
         if (go.tag == "Snowball")
         {
             hp -= 5;
-            Destroy(go);
         }
     }
 
